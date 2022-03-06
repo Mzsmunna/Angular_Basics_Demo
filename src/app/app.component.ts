@@ -37,7 +37,8 @@ export class AppComponent { //implements OnChanges,  OnInit,  DoCheck,  AfterCon
 
 //#region Angular LifeCycle Hooks / Methods
   ngOnChanges() {
-    console.log("ngOnChanges: Invoked every time there is a change in one of th input properties of the component.");
+    console.log(`ngOnChanges: Invoked every time there is a change in one of th input properties of the component.
+    For example => @Input() decorator`);
   }
 
   ngOnInit() {
