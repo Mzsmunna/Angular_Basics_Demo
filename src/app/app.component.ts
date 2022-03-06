@@ -9,7 +9,8 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
 
-  title: string = 'Angular_Basics_Demo';
+  title: string = 'Welcome to Basics of Angular';
+  count: number = 0;
 
   images: {title: string, short: string, src: string}[] = [
     {title: 'First Slide', short: 'First Slide Short', src: "https://picsum.photos/id/700/900/500"},
@@ -31,4 +32,14 @@ export class AppComponent {
   //     pauseOnHover: true
   //   })
   // }
+
+  Hide(): void {
+    console.log("trying to hide modal");
+    // var modalDiv: any = document.getElementById('staticBackdrop') as any
+    // modalDiv.modal('hide');
+  }
+
+  Counter(): number {
+    return this.count++;
+  }
 }
