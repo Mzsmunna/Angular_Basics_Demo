@@ -43,7 +43,69 @@
                 <a href="#" class="list-group-item list-group-item-action disabled bg-dark text-white border-white" tabindex="-1" aria-disabled="true">A disabled link item</a>
               </div>
             </div>
-            <div class="tab-pane fade" id="cli-pills-messages" role="tabpanel" aria-labelledby="cli-pills-messages-tab">Angular File Strucure...</div>
+            <div class="tab-pane fade" id="cli-pills-messages" role="tabpanel" aria-labelledby="cli-pills-messages-tab">
+              <div class="accordion-body">
+                <nav>
+                  <div class="nav nav-tabs" id="file-nav-tab" role="tablist">
+                    <button class="nav-link active" id="file-nav-home-tab" data-bs-toggle="tab" data-bs-target="#file-nav-home" type="button" role="tab" aria-controls="file-nav-home" aria-selected="true">package.json</button>
+                    <button class="nav-link" id="file-nav-profile-tab" data-bs-toggle="tab" data-bs-target="#file-nav-profile" type="button" role="tab" aria-controls="file-nav-profile" aria-selected="false">package-lock.json</button>
+                    <button class="nav-link" id="file-nav-contact-tab" data-bs-toggle="tab" data-bs-target="#file-nav-contact" type="button" role="tab" aria-controls="file-nav-contact" aria-selected="false">Contact</button>
+                  </div>
+                </nav>
+                <div class="tab-content m-2" id="file-nav-tabContent">
+                  <div class="tab-pane fade show active" id="file-nav-home" role="tabpanel" aria-labelledby="file-nav-home-tab">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                        This file is a must to run and build the project properly. It contains all the dependent node packages name & version for the project
+                      </a>
+                    </div>
+
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"scripts":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the npm commands for the project is defined in scripts</p>
+                        <small class="text-muted">You can also add any ng commands or other commands to run through npm.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"dependencies":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the dependent node modules /packages for the project to run is defined in dependencies</p>
+                        <small class="text-muted">No need to add dependencies which are only needed while building the app. For example : Typescript</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"devDependencies":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the node modules / packages which are only needed to work on the project but not needed to run the project is defined in devDependencies</p>
+                        <small class="text-muted">For example : Typescript module shold be added in devDependencies</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"version":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Holds the version number of the app / project</p>
+                        <small class="text-muted">It's important for package-lock.json file. For example your project is dependent on a particular version of a 3rd party module</small>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="file-nav-profile" role="tabpanel" aria-labelledby="file-nav-profile-tab">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                        This file similar like package.json and also quite important file. The only difference is, it contains all the dependent node modules name & version for all the 3rd party node modules which we are using for our project
+                      </a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="file-nav-contact" role="tabpanel" aria-labelledby="file-nav-contact-tab">Contact...</div>
+                </div>
+              </div>
+            </div>
             <div class="tab-pane fade" id="cli-pills-settings" role="tabpanel" aria-labelledby="cli-pills-settings-tab">Settings...</div>
           </div>
         </div>
