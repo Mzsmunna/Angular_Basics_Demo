@@ -49,8 +49,9 @@
                 <nav>
                   <div class="nav nav-tabs" id="file-nav-tab" role="tablist">
                     <button class="nav-link active" id="file-nav-home-tab" data-bs-toggle="tab" data-bs-target="#file-nav-home" type="button" role="tab" aria-controls="file-nav-home" aria-selected="true">package.json</button>
-                    <button class="nav-link" id="file-nav-profile-tab" data-bs-toggle="tab" data-bs-target="#file-nav-profile" type="button" role="tab" aria-controls="file-nav-profile" aria-selected="false">package-lock.json</button>
-                    <button class="nav-link" id="file-nav-contact-tab" data-bs-toggle="tab" data-bs-target="#file-nav-contact" type="button" role="tab" aria-controls="file-nav-contact" aria-selected="false">node_modules</button>
+                    <!-- <button class="nav-link" id="file-nav-profile-tab" data-bs-toggle="tab" data-bs-target="#file-nav-profile" type="button" role="tab" aria-controls="file-nav-profile" aria-selected="false">Profile</button> -->
+                    <button class="nav-link" id="file-nav-angular-tab" data-bs-toggle="tab" data-bs-target="#file-nav-angular" type="button" role="tab" aria-controls="file-nav-angular" aria-selected="false">angular.json</button>
+                    <button class="nav-link" id="file-nav-contact-tab" data-bs-toggle="tab" data-bs-target="#file-nav-contact" type="button" role="tab" aria-controls="file-nav-contact" aria-selected="false">others</button>
                   </div>
                 </nav>
                 <div class="tab-content m-2" id="file-nav-tabContent">
@@ -96,17 +97,174 @@
                       </a>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="file-nav-profile" role="tabpanel" aria-labelledby="file-nav-profile-tab">
+                  <!-- <div class="tab-pane fade" id="file-nav-profile" role="tabpanel" aria-labelledby="file-nav-profile-tab">
+                    Profile...
+                  </div> -->
+                  <div class="tab-pane fade" id="file-nav-angular" role="tabpanel" aria-labelledby="file-nav-angular-tab">
                     <div class="list-group">
                       <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
-                        This file similar like package.json and also quite important file. The only difference is, it contains all the dependent node modules name & version for all the 3rd party node modules which we are using for our project
+                        This file is a must for Angular project / solution configuration. It contains all the necessary setting for the Project to work properly
+                      </a>
+                    </div>
+
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"newProjectRoot": "projects"</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1"><code>'ng generate application project_name'</code> for this command All the projects under the Angular solution / workspace will be created inside "projects" folder by default</p>
+                        <small class="text-muted">To change this you need to change the value of this key : "newProjectRoot"</small>
+                      </a>
+                      <div class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"projects":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the projects configuration will be inside this "projects" key</p>
+                        <small class="text-muted">For single project there will be single object and for multiple projects / libraries there will be multiple objects inside "projects" key</small>
+                        <div class="list-group m-2">
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"projectType": "application"</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">name of the project type is defined here</p>
+                            <small class="text-muted">No need to change anything here.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"root":</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">Path of the Project. For Single project is will be empty.</p>
+                            <small class="text-muted">For multiple Projects there will be a path most likely : projects/project_name</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"sourceRoot": "src"</h5>
+                              <small class="text-muted">3 days ago</small>
+                            </div>
+                            <p class="mb-1">By default "src" is the folder where all your source code files will be available</p>
+                            <small class="text-muted">For example : index.html, main.ts, modules, components, services etc</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"outputPath": "dist/project_name"</h5>
+                              <small class="text-muted">projects.architect.options.outputPath</small>
+                            </div>
+                            <p class="mb-1">By default projects build compiled files will be inside "dist/project_name"</p>
+                            <small class="text-muted">For Asp.Net Core output should be : wwwroot</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"index": "src/index.html"</h5>
+                              <small class="text-muted">projects.architect.options.index</small>
+                            </div>
+                            <p class="mb-1">Since Angular is a Single Page Application (SPA). So by default it will render everything inside "index.html" file</p>
+                            <small class="text-muted"></small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"main": "src/main.ts"</h5>
+                              <small class="text-muted">projects.architect.options.main</small>
+                            </div>
+                            <p class="mb-1">This "main.ts" file is the main entry point of the Angular project</p>
+                            <small class="text-muted"></small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"polyfills": "src/polyfills.ts"</h5>
+                              <small class="text-muted">projects.architect.options.polyfills</small>
+                            </div>
+                            <p class="mb-1">If you want to support Angular in any unsupported browser like IE then all those lagacy code will be written here</p>
+                            <small class="text-muted"></small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">"tsConfig": "tsconfig.app.json"</h5>
+                              <small class="text-muted">projects.architect.options.tsConfig</small>
+                            </div>
+                            <p class="mb-1">By default Angular use this "tsconfig.app.json" file for the TypeScript configuration</p>
+                            <small class="text-muted">This "tsconfig.app.json" file basically extended the configuration from "tsconfig.json" file</small>
+                          </a>
+                        </div>
+                      </div>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"devDependencies":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the node modules / packages which are only needed to work on the project but not needed to run the project is defined in devDependencies</p>
+                        <small class="text-muted">For example : Typescript module shold be added in devDependencies</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">"version":</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Holds the version number of the app / project</p>
+                        <small class="text-muted">It's important for package-lock.json file. For example your project is dependent on a particular version of a 3rd party module</small>
                       </a>
                     </div>
                   </div>
                   <div class="tab-pane fade" id="file-nav-contact" role="tabpanel" aria-labelledby="file-nav-contact-tab">
                     <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
-                        All the 3rd party packages / libraries are download & installed inside "node_modules" folder
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">package-lock.json</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">This file similar like package.json and also quite important file. The only difference is, it contains all the dependent node modules name & version for all the 3rd party node modules which we are using for our project</p>
+                        <small class="text-muted"></small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">node_modules (folder)</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the 3rd party packages / libraries are download & installed inside "node_modules" folder</p>
+                        <small class="text-muted">No need to touch or make any changes inside "node_modules" folder</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">.browserslistrc</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the Browsers that supported Angular is listed here</p>
+                        <small class="text-muted"></small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">.editorconfig</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All your IDE related setting & configuration will be added here</p>
+                        <small class="text-muted"></small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">.gitignore</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">All the files & folder which are not needed to push in git will be listed inside the file</p>
+                        <small class="text-muted">For Example : /node_modules, /dist, /.vscode/*, .vscode/settings.json etc</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">karma.conf.js</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">To customize Karma library configurations we can make changes in "karma.conf.js" file</p>
+                        <small class="text-muted">Angular use Karma library to write any sort of test cases for our Project.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">tsconfig.json</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">To customize the Typescript compiler we can make changes in this "tsconfig.json" file</p>
+                        <small class="text-muted">Note : "tsconfig.spec.json" is used for testing ts code</small>
                       </a>
                     </div>
                   </div>
