@@ -281,7 +281,7 @@
         <ol class="list-group list-group-numbered">
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
-              <div class="fw-bold">Test Interpolation</div>
+              <div class="fw-bold">Text Interpolation</div>
               <p class="alert alert-success">type any <code>{{</code>varable_name<code>}}</code> inside html to print value as string</p>
               <p class="alert alert-success">also can do stuff like : <code>{{</code>2+2*4<code>}}</code> or <code>{{</code>count==15<code>}}</code> or <code>{{</code>count+15<code>}}</code></p>
               <p class="alert alert-success">you can even bind class name with text interpolation like this : <code>&lt;span class="{{</code><code>varable_name}}"&gt;typeof&lt;/span&gt;</code></p>
@@ -291,8 +291,9 @@
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
-              <div class="fw-bold">Subheading</div>
-              Cras justo odio
+              <div class="fw-bold">Event binding & function calling</div>
+              <p class="alert alert-success">Click Event <button type="button" class="btn btn-secondary btn-sm" (click)="ClickMe('button clicked')">{{eventOutputModal.click}}</button></p>
+
             </div>
             <span class="badge bg-primary rounded-pill">14</span>
           </li>

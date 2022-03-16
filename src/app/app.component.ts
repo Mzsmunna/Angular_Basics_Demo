@@ -15,6 +15,7 @@ export class AppComponent { //implements OnInit, OnChanges, DoCheck, AfterConten
 
   title: string = 'Welcome to Basics of Angular';
   count: number = 0;
+  eventOutputModal: IEventOutputModal;
 
   images: {title: string, short: string, src: string}[] = [
     {title: 'First Slide', short: 'First Slide Short', src: "https://picsum.photos/id/700/900/500"},
@@ -26,6 +27,17 @@ export class AppComponent { //implements OnInit, OnChanges, DoCheck, AfterConten
     config.interval = 1000;
     config.keyboard = true;
     config.pauseOnHover = true;
+
+    this.eventOutputModal = {
+      id: 1,
+      click: "button",
+      keyup: "",
+      keydown: "",
+      blur: "",
+      input: "",
+      mouseOver: "",
+      mouseLeave: ""
+    }
 
     console.log("constructor: This is invoked when Angular creates a component or directive by calling new on the class.");
   }
@@ -95,4 +107,21 @@ export class AppComponent { //implements OnInit, OnChanges, DoCheck, AfterConten
   Counter(): number {
     return this.count++;
   }
+
+  clickCount : number = 0;
+  ClickMe(value : string): void {
+    this.clickCount = this.clickCount + 1;
+    this.eventOutputModal.click = value + ` ${this.clickCount}`;
+  }
+}
+
+export interface IEventOutputModal {
+  readonly id: number,
+  click: string,
+  keyup: string,
+  keydown: string,
+  blur: string,
+  input: string,
+  mouseOver: string,
+  mouseLeave: string
 }
